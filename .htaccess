@@ -1,0 +1,36 @@
+#apache
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	
+	#论坛
+	RewriteRule ^bbs/display-([0-9]+)-([0-9]+)$ index.php?m=index&c=bbs&v=display&forumid=$1&threadid=$2
+	RewriteRule ^bbs/display-([0-9]+)-([0-9]+)-([0-9]+)$ index.php?m=index&c=bbs&v=display&forumid=$1&threadid=$2&isrush=$3
+	RewriteRule ^bbs/guide-([a-zA-Z]+)$ index.php?m=index&c=bbs&v=guide&ac=$1
+	RewriteRule ^bbs/group-([0-9]+)$ index.php?m=index&c=bbs&v=group&gid=$1
+	RewriteRule ^bbs/threads-([0-9]+)$ index.php?m=index&c=bbs&v=threads&forumid=$1
+	RewriteRule ^bbs/post-([0-9]+)$ index.php?m=index&c=bbs&v=post&forumid=$1
+	RewriteRule ^bbs/post-([0-9]+)-([0-9]+)$ index.php?m=index&c=bbs&v=post&forumid=$1&special=$2
+	RewriteRule ^bbs/edit-([0-9]+)-([0-9]+)$ index.php?m=index&c=bbs&v=edit&forumid=$1&threadid=$2
+	RewriteRule ^bbs/threads-([0-9]+)-([a-zA-Z]+)$ index.php?m=index&c=bbs&v=threads&forumid=$1&orderby=$2
+	
+	RewriteRule ^article/([a-zA-Z]+)$ index.php?m=index&c=article&v=list&pinyin=$1
+	RewriteRule ^wap/article/([a-zA-Z]+)$ index.php?m=wap&c=article&v=list&pinyin=$1
+	RewriteRule ^article/([a-zA-Z]+)/page/([0-9]+)$ index.php?m=index&c=article&v=list&pinyin=$1&page=$2
+
+	RewriteRule ^article/([a-zA-Z]+)/([0-9]+).html$ index.php?m=index&c=article&v=show&pinyin=$1&id=$2
+	RewriteRule ^wap/article/([a-zA-Z]+)/([0-9]+).html$ index.php?m=wap&c=article&v=show&pinyin=$1&id=$2
+	
+	RewriteCond %{SCRIPT_FILENAME} !-f
+	RewriteCond %{SCRIPT_FILENAME} !-d
+	RewriteRule ^(.*)$ index.php [L,E=PATH_INFO:$1]
+</IfModule>
+
+#nginx
+#location / {
+	#rewrite ^(.*)/help/([0-9]+)$ $1/index.php?m=index&c=help&v=index&id=$2 last; 
+    #index index.php;
+            
+	#if (!-f $request_filename){
+		#rewrite (.*) /index.php;
+	#}
+#}

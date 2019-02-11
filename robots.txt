@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /u*
+Disallow: /admin*
+Disallow: /server*
+Disallow: /application/
+Disallow: /cache/
+Disallow: /data/
+Disallow: /logs/
+Disallow: /resource/
+Disallow: /thumbfile/
+Disallow: /uploadfile/
+Disallow: /view/

@@ -1,0 +1,95 @@
+/*-------------------------------
+*	Default dropdown styles
+--------------------------------*/
+
+.tzSelect{
+	
+	/* This is the container of the new select element */
+	
+	height:26px;
+	display:inline-block;
+	position:relative;
+}
+
+.tzSelect .selectBox{
+	position:absolute;
+	line-height:26px;
+	height:100%;
+	width:100%;
+	text-align:center;
+	color:#666666;
+	cursor:pointer;
+}
+
+.tzSelect .selectBox:hover,
+.tzSelect .selectBox.expanded{
+	color:#2c5667;
+}
+
+.tzSelect .dropDown{
+	position:absolute;
+	top:27px;
+	left:0;
+	width:100%;
+	list-style:none;
+	z-index:1000;
+}
+
+.tzSelect li{
+	background-color:#fff;
+	border:1px solid #e8e8e8;
+	border-top:none;
+	cursor:pointer;
+	width:59px;
+	text-align:center;
+}
+
+.tzSelect li:hover{
+	background-color:#f7f7f7;
+}
+
+
+/*-----------------------------------------------------
+*	Additional styles for the apple product dropdown
+------------------------------------------------------*/
+
+
+.tzSelect .hasDetails{
+	border-width:0 1px 1px;
+}
+
+.tzSelect .hasDetails li{
+	height:85px;
+	position:relative;
+	padding:0;
+	text-align:left;
+	
+	/* Again, using CSS3 multiple backgrounds with a fallback */
+	
+	background:url('img/dropdown_slice.png') repeat-x #222;
+	background-image:url('img/dropdown_slice.png'),url('img/dropdown_slice.png'),url('img/dropdown_slice.png');
+	background-position: 50% -171px, 0 -85px, 0 0;
+	background-repeat: no-repeat, no-repeat, repeat-x;
+}
+
+.tzSelect .hasDetails li:hover{
+	background-position: 50% -256px, 0 -85px, 0 0;
+}
+
+.tzSelect .hasDetails li span{
+	left:88px;
+	position:absolute;
+	top:27px;
+}
+
+.tzSelect .hasDetails li i{
+	color:#999999;
+	display:block;
+	font-size:12px;
+}
+
+.tzSelect .hasDetails li img{
+	left:9px;
+	position:absolute;
+	top:13px;
+}
