@@ -19,4 +19,9 @@ class Helper
     public static function showBriefTwo($params){
     	return 'params:' . $params;
     }
+
+    public static function cutStr($paramstr)
+    {
+        return $paramstr;
+    }
 }
