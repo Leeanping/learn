@@ -18,13 +18,13 @@
         }
         </style>
     </head>
-    
+
     <body>
     	<div id="wrapper">
             <a href="/"><img src="{{$_pathroot}}resource/images/404_icon.png"></a>
             <div>
                 <h1>唉呀!</h1>
-                <p>你正在寻找的页面无法找到。<a style="color:#ff6600;" href="/">返回首页</a></p>
+                <p>您正在寻找的页面无法找到。<a style="color:#ff6600;" href="/">返回首页</a></p>
             </div>
         </div>
     </body>
